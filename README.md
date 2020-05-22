@@ -101,3 +101,49 @@
     make ARCH=arm -j 6 CROSS_COMPILE=arm-linux-gnueabihf- zImage modules dtbs
     ```
 - 위 명령어는 퀴드코어 컴퓨터 환경 기준이며, 고성능 최신형 컴퓨터의 경우 -j 6 이라는 컴파일 옵션에서 6의 숫자 대신 더 높은 숫자를 사용하여 병렬로 컴파일이 가능합니다. 이때, 컴파일 옵션의숫자는 자신의 컴퓨터 코어 갯수 *1.5 배를 추천드립니다. 
+
+
+## List Action Item 
+  - SAMBA, sch&ssh 프로토콜 이용하기, DD 설명
+  - VNC 장단점 설명 : 집에서 꼽아놓으면 언제어디서나 접속 가능! -> 원장님 실제사례
+  - TTL레벨 신호 UART / RS-232 신호 / USB 프로토콜 신호
+  - 정보 출력하기 : 실습 현재 시스템 런타임 커널 파라미터 출력
+    - cat /proc/cpuinfo
+    - cat /proc/meminfo
+    - cat /proc/iomem
+    - cat /proc/sys/kernel/osrelease
+    - cat /proc/partitions
+    - cat /proc/version
+  - 참고, 같은 네트워크상의 라즈베리파이 검색
+    - 명령어 : ping raspberrypi.local
+    ```
+    C:\Users\dhkim>ping raspberrypi.local
+
+    Ping raspberrypi.local [169.254.135.133] 32바이트 데이터 사용:
+    169.254.135.133의 응답: 바이트=32 시간<1ms TTL=64
+    169.254.135.133의 응답: 바이트=32 시간<1ms TTL=64
+    169.254.135.133의 응답: 바이트=32 시간<1ms TTL=64
+    169.254.135.133의 응답: 바이트=32 시간<1ms TTL=64
+
+    169.254.135.133에 대한 Ping 통계:
+        패킷: 보냄 = 4, 받음 = 4, 손실 = 0 (0% 손실),
+    왕복 시간(밀리초):
+        최소 = 0ms, 최대 = 0ms, 평균 = 0ms
+
+    C:\Users\dhkim>
+    ```  
+  - 이것저것 명령어들
+    -  vcgencmd measure_temp : 온도를 알아내는 명령어  
+    - vcgencmd measure_volts : 전압
+    - pi@raspberrypi:~ $ cat /sys/firmware/devicetree/base/model
+        ```
+        Raspberry Pi 4 Model B Rev 1.2  
+        ```
+    - pi@raspberrypi:~ $ cat /sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_max_freq
+        ```
+        1500000
+        ```
+    - 데비안 계열 시스템 정보(SW) : getconf -a
+    - 시스템 정보(HW) : uname -a
+  - 윈도우용 RPI 툴체인 다운로드해서 소스인사이트를 활용한 라즈베리파이 커널 분석은 어떨지
+  - GCC소개, 컴파일과정 설명, Makefile 소개, GDB실습??
