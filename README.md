@@ -147,3 +147,26 @@
     - 시스템 정보(HW) : uname -a
   - 윈도우용 RPI 툴체인 다운로드해서 소스인사이트를 활용한 라즈베리파이 커널 분석은 어떨지
   - GCC소개, 컴파일과정 설명, Makefile 소개, GDB실습??
+# 1 LED LowLevel 점멸
+  - LED LowLevel 점멸 : shell 명령어로 제어(코딩없이 명령어로만)
+    ```
+    echo "18" > /sys/class/gpio/export 
+    echo "out" > /sys/class/gpio/gpio18/direction 
+    echo "1" > /sys/class/gpio/gpio18/value
+    echo "0" > /sys/class/gpio/gpio18/value 
+    echo "1" > /sys/class/gpio/gpio18/value
+    echo "0" > /sys/class/gpio/gpio18/value 
+    echo "18" > /sys/class/gpio/unexport 
+    ```
+  - GPIO 제어 1
+    ```
+    gcc -o gpioled gpioled.c 
+    ls
+    sudo ./gpioled 18 
+    ```
+  - GPIO 제어 2 (자동5번 점멸)  
+    ```
+    gcc -o turn turnled.c
+    ls
+    sudo ./turn 18
+    ```
