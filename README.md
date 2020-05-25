@@ -3,6 +3,7 @@
   - 목차
     - 
     - 
+    - 개인추천 학습링크 : https://olc.kr/course/course_online_view.jsp?id=35&s_keyword=Kernel&x=0&y=0#self
   - 참조
     - https://www.raspberrypi.org/documentation/linux/kernel/building.md
     - https://wikidocs.net/3243
