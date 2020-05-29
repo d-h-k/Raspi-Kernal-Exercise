@@ -1,0 +1,1 @@
+cmd_/home/pi/Raspi4-Kernal-Exercise/3_simple/hi.ko := ld -r  -EL -T ./scripts/module-common.lds -T ./arch/arm/kernel/module.lds  --build-id  -o /home/pi/Raspi4-Kernal-Exercise/3_simple/hi.ko /home/pi/Raspi4-Kernal-Exercise/3_simple/hi.o /home/pi/Raspi4-Kernal-Exercise/3_simple/hi.mod.o ;  true
