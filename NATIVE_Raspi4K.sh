@@ -1,6 +1,5 @@
-sudo apt install git bc bison flex libssl-dev make
+sudo apt install -y git bc bison flex libssl-dev make
 git clone --depth=1 https://github.com/raspberrypi/linux
-
 git clone --depth=1 --branch <branch> https://github.com/raspberrypi/linux
 cd linux
 KERNEL=kernel7l
