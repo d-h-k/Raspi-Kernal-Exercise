@@ -22,6 +22,7 @@ inf mod_exit(void)
     printk( KERN_INFO "bye\n");
     printk( KERN_INFO "bye\n");
     printk( KERN_INFO "\n");
+    return 0;
 }
 
 module_init(mod_init);
