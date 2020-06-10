@@ -1,0 +1,1 @@
+cmd_/home/pi/Raspi4-Kernal-Exercise/6_new/minco.ko := ld -r  -EL -T ./scripts/module-common.lds -T ./arch/arm/kernel/module.lds  --build-id  -o /home/pi/Raspi4-Kernal-Exercise/6_new/minco.ko /home/pi/Raspi4-Kernal-Exercise/6_new/minco.o /home/pi/Raspi4-Kernal-Exercise/6_new/minco.mod.o ;  true

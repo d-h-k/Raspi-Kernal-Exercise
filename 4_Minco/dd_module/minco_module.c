@@ -8,10 +8,14 @@ MODULE_LICENSE("GPL");
 #define MOD_NAME "MINCO"
 
 /* 입출력 함수를 위한 선언 */
-static int gpio_open(struct inode *, struct file *);
-static ssize_t gpio_read(struct file *, char *, size_t, loff_t *);
-static ssize_t gpio_write(struct file *, const char *, size_t, loff_t *);
-static int gpio_close(struct inode *, struct file *);
+
+static int minco_init(void)
+static void minco_exit(void)
+static int minco_open(struct inode *, struct file *);
+static int minco_close(struct inode *, struct file *);
+//static ssize_t gpio_read(struct file *, char *, size_t, loff_t *);
+//static ssize_t gpio_write(struct file *, const char *, size_t, loff_t *);
+
 
 
 static struct file_operations gpio_fops = {
@@ -45,7 +49,8 @@ static int minco_close(struct inode *inod, struct file *fil)
 }
 
 
-
+module_init(minco_init);
+module_exit(minco_exit);
 
 
 /* 유닉스 입출력 함수들의 처리를 위한 구조체 */

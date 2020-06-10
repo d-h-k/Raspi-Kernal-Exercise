@@ -5,7 +5,7 @@
 #include <linux/uaccess.h> 		/* copy_to_user( ), copy_from_user( ) 커널 함수 */
 
 MODULE_LICENSE("GPL");
-MODULE_AUTHOR("YoungJin Suh");
+MODULE_AUTHOR("My LED");
 MODULE_DESCRIPTION("Raspberry Pi GPIO LED Device Module");
 
 #if 0
